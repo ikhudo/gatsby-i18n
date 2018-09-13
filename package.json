@@ -1,35 +1,45 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "@igorko/gatsby-plugin-i18next",
+  "description": "Gatsby plugin that provides i18n support",
+  "version": "1.0.0",
+  "author": "hello@webappsolutions.de",
+  "repository": "ikhudo/gatsby-plugin-i18next",
+  "keywords": [
+    "react",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-component",
+    "lingui",
+    "i18n"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "plugin.js"
+  ],
   "scripts": {
-    "build": "lerna run build --scope @wapps/*",
-    "build:watch": "lerna run build:watch --parallel --scope @wapps/*",
-    "deploy": "lerna run deploy --concurrency 1 --scope gatsby-starter*"
+    "build": "rimraf lib && babel src --out-dir lib --ignore __tests__",
+    "build:watch": "rimraf lib && babel -w src --out-dir lib --ignore __tests__",
+    "prepare": "yarn run build"
+  },
+  "dependencies": {
+    "i18next": "^11.6.0",
+    "react-helmet": "^5.2.0",
+    "react-i18next": "^7.10.1"
+  },
+  "peerDependencies": {
+    "gatsby": ">2.0.0-alpha",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-rc.1",
-    "@babel/core": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.1",
-    "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "@babel/preset-react": "^7.0.0-rc.1",
-    "babel-eslint": "^8.2.6",
-    "eslint": "^5.2.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.50.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-prettier": "^2.6.1",
-    "eslint-plugin-react": "^7.8.2",
-    "gh-pages": "^1.2.0",
-    "jest": "^23.4.2",
-    "lerna": "^3.0.2",
-    "prettier": "^1.13.7"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "gatsby": "next",
+    "rimraf": "^2.6.2"
   },
-  "workspaces": [
-    "packages/*",
-    "starters/*"
-  ]
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "e0c6da7acc9c052d9f507255d09fb82df8ce6adf"
 }
