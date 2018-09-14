@@ -1,5 +1,5 @@
 {
-  "name": "@igorko/gatsby-plugin-i18next",
+  "name": "gatsby-plugin-i18next",
   "description": "Gatsby plugin that provides i18n support",
   "version": "1.0.0",
   "author": "hello@webappsolutions.de",
