@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-i18next",
   "description": "Gatsby plugin that provides i18n support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "igorko82@me.com",
   "repository": "ikhudo/gatsby-plugin-i18next",
   "keywords": [
@@ -14,15 +14,13 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "files": [
-    "plugin.js"
-  ],
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib --ignore __tests__",
+    "build": "babel src --out-dir . --ignore __tests__",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
     "build:watch": "rimraf lib && babel -w src --out-dir lib --ignore __tests__",
-    "prepare": "yarn run build"
   },
   "dependencies": {
+    "cross-env": "^5.2.0",
     "i18next": "^11.6.0",
     "react-helmet": "^5.2.0",
     "react-i18next": "^7.10.1"
