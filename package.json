@@ -2,7 +2,7 @@
   "name": "gatsby-plugin-i18next",
   "description": "Gatsby plugin that provides i18n support",
   "version": "1.0.0",
-  "author": "hello@webappsolutions.de",
+  "author": "igorko82@me.com",
   "repository": "ikhudo/gatsby-plugin-i18next",
   "keywords": [
     "react",
@@ -40,6 +40,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "e0c6da7acc9c052d9f507255d09fb82df8ce6adf"
+  }
 }
